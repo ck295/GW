@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 195 20% 97%;
+    --foreground: 215 28% 14%;
+    --card: 0 0% 100%;
+    --card-foreground: 215 28% 14%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 28% 14%;
+    --primary: 174 78% 30%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 18% 94%;
+    --secondary-foreground: 215 28% 14%;
+    --muted: 210 18% 94%;
+    --muted-foreground: 215 14% 46%;
+    --accent: 210 18% 94%;
+    --accent-foreground: 215 28% 14%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 18% 89%;
+    --input: 214 18% 89%;
+    --ring: 174 78% 30%;
+    --radius: 0.5rem;
+
+    --sidebar-background: 215 52% 10%;
+    --sidebar-foreground: 210 18% 85%;
+    --sidebar-primary: 174 78% 42%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 215 40% 16%;
+    --sidebar-accent-foreground: 210 18% 85%;
+    --sidebar-border: 215 40% 16%;
+    --sidebar-ring: 174 78% 30%;
+
+    --color-production: 160 84% 39%;
+    --color-stock: 192 91% 36%;
+    --color-livraison: 38 92% 50%;
+    --color-finance: 263 70% 50%;
+    --color-navy: 215 52% 10%;
+    --color-navy-light: 215 40% 16%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+  .module-production {
+    --module-color: hsl(var(--color-production));
+  }
+  .module-stock {
+    --module-color: hsl(var(--color-stock));
+  }
+  .module-livraison {
+    --module-color: hsl(var(--color-livraison));
+  }
+  .module-finance {
+    --module-color: hsl(var(--color-finance));
+  }
+}
